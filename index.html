@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Plan</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap-duallistbox.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-multiselect.min.css" />
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="assets/css/ui.jqgrid.min.css" />
+
+
+
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+
+    <!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+
+    <!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+    <!-- gxprier css  -->
+    <link rel="stylesheet" href="assets/css/gxprier.css" />
+    <link rel="stylesheet" href="assets/css/modalpopup.css" />
+
+
+    <!-- gxprier JS Main -->
+    <!-- <script src="assets/js/maingetandpost.js"></script> -->
+
+    <!-- ace settings handler -->
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+    <style>
+        .navbar .nav>li>a:focus,
+        .navbar .nav>li>a:hover {
+            color: #ffffff !important;
+        }
+        
+        .navbar .nav>li>a:focus,
+        .navbar .nav>li>a {
+            color: #ffffff !important;
+        }
+        
+        .table>tbody>tr>th {
+            border: 1px solid gray;
+        }
+        
+        .table th {
+            border-top: 1px solid gray;
+        }
+        
+        .new-table td {
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid gray;
+        }
+        
+        .new-table input {
+            height: 25px;
+        }
+        
+        .left-cont {
+            width: 340px;
+            text-align: left !important;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="no-skin">
+
+
+    <!-- pop up goes here -->
+
+    <!-- pop up ends here -->
+    <div id="navbar" class="navbar navbar-default          ace-save-state">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                    <span class="sr-only">Toggle sidebar</span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+
+                    <span class="icon-bar"></span>
+                </button>
+
+            <div class="navbar-header pull-left">
+                <a href="index.html" class="navbar-brand">
+
+
+                    <p class="blue bolder" style="font-size:24px; color:#393939; padding-top:10px;">Plan</p>
+                </a>
+            </div>
+
+            <h3 style="position: absolute; margin-left: 15%; margin-top: 10px; color: #ffffff;"></h3>
+
+            <div class="navbar-buttons navbar-header pull-right" role="navigation">
+
+                <ul class="nav ace-nav">
+
+                    <li class="light-blue dropdown-modal">
+                        <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                            <!--<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />-->
+                            <span class="user-info">
+                                            
+                                            <span id="fff">HI</span>
+                            </span>
+
+                            <i class="ace-icon fa fa-caret-down"></i>
+                        </a>
+
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                            <li>
+                                <a href="#">
+                                    <i class="ace-icon fa fa-cog"></i> Settings
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="ace-icon fa fa-user"></i> Profile
+                                </a>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li>
+
+                                <i class="ace-icon fa fa-power-off"></i>
+                                <span id="removesession"> Logout</span>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-container -->
+    </div>
+
+    <div class="main-container ace-save-state" id="main-container">
+        <script type="text/javascript">
+            try {
+                ace.settings.loadState('main-container')
+            } catch (e) {}
+        </script>
+
+        <div id="sidebar" class="sidebar  responsive  ace-save-state">
+            <script type="text/javascript">
+                try {
+                    ace.settings.loadState('sidebar')
+                } catch (e) {}
+            </script>
+
+            <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+                <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                    <button class="btn btn-success">
+							<i class="ace-icon fa fa-signal"></i>
+						</button>
+
+                    <button class="btn btn-info">
+							<i class="ace-icon fa fa-pencil"></i>
+						</button>
+
+                    <button class="btn btn-warning">
+							<i class="ace-icon fa fa-users"></i>
+						</button>
+
+                    <button class="btn btn-danger">
+							<i class="ace-icon fa fa-cogs"></i>
+						</button>
+                </div>
+
+                <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                    <span class="btn btn-success"></span>
+
+                    <span class="btn btn-info"></span>
+
+                    <span class="btn btn-warning"></span>
+
+                    <span class="btn btn-danger"></span>
+                </div>
+            </div>
+            <!-- /.sidebar-shortcuts -->
+
+            <ul class="nav nav-list">
+                <li class="active">
+                    <a href="index.html">
+                        <i class="menu-icon fa fa-home home-icon"></i>
+                        <span class="menu-text"> Home </span>
+                    </a>
+
+                    <b class="arrow"></b>
+                </li>
+                <!--<li class="">
+                    <a href="Chebyshev.html">
+                        <i class="menu-icon fa fa-desktop"></i>
+                        <span class="menu-text">
+                                Chebyshev
+                            </span>
+
+                        <b class="arrow"></b>
+                    </a>
+
+                </li>
+
+                <li class="">
+                    <a href="testresult.html">
+                        <i class="menu-icon fa fa-list"></i>
+                        <span class="menu-text">
+                                TestResult
+                            </span>
+
+                        <b class="arrow"></b>
+                    </a>
+
+                </li>
+                <li class="">
+                        <a href="Test_management.html">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                Test Case Mngt
+                            </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+                    <li class="">
+                        <a href="suite_management.html">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                Suite Mngt
+                            </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+
+                    <li class="#">
+                        <a href="defect_management.html">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                Defect Mngt
+                            </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                Test Results
+                            </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span class="menu-text">
+                                Defect Dashboard
+                            </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+
+
+					<li class="">
+                        <a href="Suit_execution_report.html">
+                            <i class="menu-icon fa fa-list"></i>
+                            <span class="menu-text"> Reports </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+					</li>
+
+                    <li class="">
+                        <a href="admin.html">
+                            <i class="menu-icon fa fa-list"></i>
+                            <span class="menu-text"> Admin </span>
+
+                            <b class="arrow"></b>
+                        </a>
+
+                    </li>
+
+				</ul><!-- /.nav-list -->
+
+                <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+        </div>
+
+        <div class="main-content">
+
+            <div class="main-content-inner">
+                <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li class="active">
+                            <i class="ace-icon fa fa-home home-icon"></i> Home
+                        </li>
+
+
+                    </ul>
+                    <!-- /.breadcrumb -->
+
+
+                </div>
+
+                <div class="page-content">
+
+                    <!-- /.ace-settings-container -->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+                            <div class="btn-toolbar">
+                                <div class="col-md-12">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- PAGE CONTENT BEGINS -->
+
+                            <div class="container-fluid">
+
+                                <div class="col-md-12" style="background-color:#F5F5F5; ">
+
+                                    <!-- Identifiction Information Starts Here-->
+                                    <div style="padding-top:20px;padding-bottom:20px; text-align:center;">
+
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tr>
+
+                                                    <th style="background-color:#005087; color:#ffffff;">Global Medical Plan</th>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="background-color:#1874CD; color:#ffffff; text-align:center; margin:0px;">
+                                                            <tr>
+                                                                <td class="left-cont"></td>
+                                                                <td><strong>International<br/>(Outside of the U.S.)</strong></td>
+                                                                <td><strong>U.S. In-Network</strong> </td>
+                                                                <td><strong>U.S. Out-of-Network</strong> </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr style="margin:0px !important;">
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+
+                                                                <td class="left-cont"><strong>Eligibility</strong></td>
+                                                                <td>All active full-time U.S. Expatriate and Third Country National Employees</td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr style="margin:0px !important;">
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+
+                                                                <td class="left-cont"><strong>Lifetime Maximum</strong></td>
+                                                                <td>Unlimited</td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+                                                                <td class="left-cont"><strong>Calendar Year Deductible </strong><br />&bull; Per Individual</td>
+                                                                <td><input type="text" name="calendar-int" id="calendar-int" placeholder="$0" /></td>
+                                                                <td><input type="text" name="calendar-in-net" id="calendar-in-net" placeholder="$400" /></td>
+                                                                <td><input type="text" name="calendar-out-net" id="calendar-out-net" placeholder="$800" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+                                                                <td class="left-cont">&bull; Per Family</td>
+                                                                <td><input type="text" name="family-int" id="family-int" placeholder="$0" /></td>
+                                                                <td><input type="text" name="family-in-net" id="family-in-net" placeholder="$800" /></td>
+                                                                <td><input type="text" name="family-out-net" id="family-out-net" placeholder="$1,600" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+                                                                <td class="left-cont"><strong>Coinsurance  </strong><br />(The percentage of covered expenses the plan pays)</td>
+                                                                <td><input type="text" name="coins-int" id="coins-int" placeholder="100%" /></td>
+                                                                <td><input type="text" name="coins-in-net" id="coins-in-net" placeholder="85%" /></td>
+                                                                <td><input type="text" name="coins-out-net" id="coins-out-net" placeholder="65%" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+                                                                <td class="left-cont"><strong>Out-of-Pocket Maximum  </strong><br />&bull; Per Individual</td>
+                                                                <td><input type="text" name="oop-int" id="oop-int" placeholder="$0" /></td>
+                                                                <td><input type="text" name="oop-in-net" id="oop-in-net" placeholder="$1,950" /></td>
+                                                                <td><input type="text" name="oop-out-net" id="oop-out-net" placeholder="$3,900" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+                                                                <td class="left-cont">&bull; Per Family <br /> <strong>Includes Deductible</strong><br />Family members meet only their individual Out-of-Pocket and then their claims will be covered at 100%; if the family Out-of-Pocket
+                                                                    has been met prior to their individual Out-ofPocket being met, their claims will be paid at 100%.</td>
+                                                                <td><input type="text" name="inc-int" id="inc-int" placeholder="$0" /></td>
+                                                                <td><input type="text" name="inc-in-net" id="inc-in-net" placeholder="$4,600" /></td>
+                                                                <td><input type="text" name="inc-out-net" id="inc-out-net" placeholder="$7,800" /></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr style="margin:0px !important;">
+
+                                                    <td style="margin:0px !important; padding:0px;">
+                                                        <table class="table new-table" style="margin:0px !important;">
+                                                            <tr>
+
+                                                                <td class="left-cont"><strong>Accumulation </strong></td>
+                                                                <td>Deductibles and Out-of-Pocket Maximums will cross-accumulate between U.S. In-Network, U.S. Out-of-Network and International. All other plan maximums and service-specific maximums (dollar
+                                                                    and occurrence) will also cross-accumulate.</td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <th style="background-color:#005087; color:#ffffff;">Certification Requirements – For services rendered inside the United States</th>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td style="border:1px solid gray; padding:15px; ">Precertification for inpatient and outpatient services received in the U.S. may be required. <br />&bull; Providers must call our toll-free number, 1.800.441.2668 to pre-certify services. <br />&bull;
+                                                        You or your dependents are responsible for ensuring that Out-of-Network providers pre-certify services. <br /> &bull; Failure to obtain precertification may affect Out-of-Pocket costs. <br />&bull;
+                                                        This is a summary only and further details can be found in the certificate booklet
+
+                                                    </td>
+
+                                                </tr>
+
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+
+                                <!-- PAGE CONTENT ENDS -->
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.page-content -->
+                </div>
+
+                <p id="userinfo23 "></p>
+                <div id="id01 " class="modal ">
+
+                    <form class="modal-content animate ">
+
+                        <div class="imgcontainer ">
+
+
+                        </div>
+                        <div style="margin-top:40px; ">
+                            <h4 style="text-align:center; font-weight:bold; ">User Login</h4>
+                        </div>
+
+                        <div class="container " style="margin-left:5%; ">
+                            <label for="uname "><b>Username :</b>&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text " placeholder="Enter Username " id="popupuserid " name="uname " required><br />
+
+                            <label for="psw "><b>Password &nbsp;:</b>&nbsp;&nbsp;&nbsp;</label>
+                            <input type="password " placeholder="Enter Password " name="psw "> <br />
+                            <div clas="col-md-4 col-md-offset-4 " style="margin-bottom:40px; ">
+                                <button type="submit " class="btn btn-primary " id="popupuser " style="margin-left:9%; width:15%; margin-top:15px; " id="alertsubmit ">Login</button>
+                            </div>
+                            <!--<label>
+        <input type="checkbox " checked="checked " name="remember "> Remember me
+      </label> -->
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="footer ">
+                    <div class="footer-inner ">
+                        <div class="footer-content ">
+                            <span class="bigger-120 ">
+							<span class="blue bolder ">Plan</span> &copy; 2018-2019
+                            </span>
+
+                            &nbsp; &nbsp;
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.main-content -->
+
+
+
+            <a href="# " id="btn-scroll-up " class="btn-scroll-up btn btn-sm btn-inverse ">
+                <i class="ace-icon fa fa-angle-double-up icon-only bigger-110 "></i>
+            </a>
+        </div>
+        <!-- /.main-container -->
+
+
+
+
+
+
+
+
+        <!-- basic scripts -->
+
+        <!--[if !IE]> -->
+        <script src="assets/js/jquery-2.1.4.min.js "></script>
+
+        <!-- <![endif]-->
+
+        <!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js "></script>
+<![endif]-->
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+
+        </script>
+
+
+        <!--<script>
+        $("#popupuser").click(function(){
+            // Check browser support
+if (typeof(Storage) !== "undefined") {
+//var x=$("#popupuserid").val();
+// Store
+
+sessionStorage.setItem("lastname", $("#popupuserid").val());
+// Retrieve
+//var z = sessionStorage.getItem("lastname");
+//$("#userinfo23").html(z);
+//alert(sessionStorage.getItem("lastname"));
+var x= sessionStorage.getItem("lastname");
+newsessitem(x);
+document.getElementById("test1").innerHTML="Ram";
+
+} else {
+document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+
+}
+
+$("#Characteristicfield").val(x);
+
+        });
+        $(document).ready(function(){
+            if(sessionStorage.getItem("lastname") === null){
+                $("#id01").css("display","block");
+
+            }
+            else{
+                var x= sessionStorage.getItem("lastname");
+            
+            $("#fff").html(x);
+
+        }
+        $("#removesession").click(function(){
+            sessionStorage.removeItem('lastname');
+            location.reload();
+        });
+            
+            
+            //alert(x);
+        });
+
+        </script>    -->
+
+</body>
+
+</html>
